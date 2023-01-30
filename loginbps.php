@@ -107,12 +107,12 @@
                     "' and password='" .
                     $password .
                     "' limit 1";
-                  $hasil = pg_query($conn, $sql);
-                  $jumlah = pg_num_rows($hasil);
+                  $hasil = mysqli_query($conn, $sql);
+                  $jumlah = mysqli_num_rows($hasil);
 
                   if ($jumlah > 0) {
                     session_start();
-                    $row = pg_fetch_assoc($hasil);
+                    $row = mysqli_fetch_assoc($hasil);
                     $_SESSION['id_pengguna'] = $row['username'];
                     $_SESSION['password'] = $row['password'];
                     $_SESSION['role'] = $row['role'];

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php include '../config.php';
-$query = pg_query($conn, "SELECT max (id_litmas) as id_litmas FROM litmas");
-$row = pg_fetch_array($query);
+$query = mysqli_query($conn, "SELECT max (id_litmas) as id_litmas FROM litmas");
+$row = mysqli_fetch_array($query);
 $kode = $row['id_litmas'];
 $id = $kode + 1; ?>
 
@@ -214,11 +214,11 @@ $id = $kode + 1; ?>
                       <select style="padding:5px 10px; width:100%;" class="chosen-select" data-placeholder="Pilih Lapas Asal" name="lapas" required>
                         <option>Pilih Lapas Asal</option>
                         <?php
-                        $lapas = pg_query(
+                        $lapas = mysqli_query(
                           $conn,
                           'SELECT * FROM lapas order by nama_lapas ASC'
                         );
-                        while ($row = pg_fetch_assoc($lapas)) {
+                        while ($row = mysqli_fetch_assoc($lapas)) {
                           echo "<option value='$row[id_lapas]'>$row[nama_lapas] </option>";
                         }
                         ?>
@@ -232,11 +232,11 @@ $id = $kode + 1; ?>
                       <select style="padding:5px 10px; width:100%;" class="chosen-select" data-placeholder="Pilih PK Klien" name="pk" required>
                         <option>Pilih PK</option>
                         <?php
-                        $pk = pg_query(
+                        $pk = mysqli_query(
                           $conn,
                           'SELECT * FROM pegawai order by jabatan ASC'
                         );
-                        while ($row = pg_fetch_assoc($pk)) {
+                        while ($row = mysqli_fetch_assoc($pk)) {
                           echo "<option value='$row[nip]'>$row[jabatan] - $row[nama_pegawai] </option>";
                         }
                         ?>
@@ -250,11 +250,11 @@ $id = $kode + 1; ?>
                       <select style="padding:5px 10px; width:100%;" class="chosen-select" data-placeholder="Pilih Jenis Kasus" name="kasus" required>
                         <option>Pilih Jenis Kasus</option>
                         <?php
-                        $kasus = pg_query(
+                        $kasus = mysqli_query(
                           $conn,
                           'SELECT * FROM kasus order by jenis_kasus ASC'
                         );
-                        while ($row = pg_fetch_assoc($kasus)) {
+                        while ($row = mysqli_fetch_assoc($kasus)) {
                           echo "<option value='$row[id_kasus]'>$row[jenis_kasus] </option>";
                         }
                         ?>
@@ -268,11 +268,11 @@ $id = $kode + 1; ?>
                       <select style="padding:5px 10px; width:100%;" class="chosen-select" data-placeholder="Pilih Status Klien" name="status" required>
                         <option>Pilih Status Saat Ini</option>
                         <?php
-                        $status = pg_query(
+                        $status = mysqli_query(
                           $conn,
                           'SELECT * FROM status_litmas order by id_status ASC'
                         );
-                        while ($row = pg_fetch_assoc($status)) {
+                        while ($row = mysqli_fetch_assoc($status)) {
                           echo "<option value='$row[id_status]'>$row[nama_status_litmas] </option>";
                         }
                         ?>
@@ -326,7 +326,7 @@ $id = $kode + 1; ?>
               $kasuss = $_POST['kasus'];
               $statuss = $_POST['status'];
 
-              $sql = pg_query($conn, "insert into litmas (id_litmas,id_jenis_litmas,nip,id_jenis_klien,id_status,id_lapas,id_kasus,nama_klien) values ('$id_litmas', 4 ,'$pkk', 2 , '$statuss', '$lapass', '$kasuss', '$nama_klien')");
+              $sql = mysqli_query($conn, "insert into litmas (id_litmas,id_jenis_litmas,nip,id_jenis_klien,id_status,id_lapas,id_kasus,nama_klien) values ('$id_litmas', 4 ,'$pkk', 2 , '$statuss', '$lapass', '$kasuss', '$nama_klien')");
               if ($sql) {
             ?>
                 echo "<script>

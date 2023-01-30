@@ -3,8 +3,8 @@
 include '../config.php';
 
 $id_litmas = $_GET['id_litmas'];
-$sql = pg_query($conn, "SELECT * from litmas where id_litmas='$id_litmas'");
-$row = pg_fetch_array($sql);
+$sql = mysqli_query($conn, "SELECT * from litmas where id_litmas='$id_litmas'");
+$row = mysqli_fetch_array($sql);
 ?>
 
 <html lang="en">
@@ -216,20 +216,20 @@ $row = pg_fetch_array($sql);
                                                 <option>Pilih Status Saat ini</option>
                                                 <?php
                                                 include '../connect.php';
-                                                $status = pg_query(
+                                                $status = mysqli_query(
                                                     $conn,
                                                     'select * from status_litmas order by id_status ASC'
                                                 );
                                                 while (
-                                                    $row2 = pg_fetch_assoc(
+                                                    $row2 = mysqli_fetch_assoc(
                                                         $status
                                                     )
                                                 ) { ?>
                                                     <option value="<?php echo $row2['id_status']; ?>" <?php if (
-                                                                $row['id_status'] == $row2['id_status']
-                                                            ) {
-                                                                echo 'selected';
-                                                            } ?>>
+                                                                                                            $row['id_status'] == $row2['id_status']
+                                                                                                        ) {
+                                                                                                            echo 'selected';
+                                                                                                        } ?>>
                                                         <?php echo $row2['nama_status_litmas']; ?>
                                                     </option>
                                                 <?php }
@@ -280,7 +280,7 @@ $row = pg_fetch_array($sql);
             <?php if (isset($_POST['simpan'])) {
                 $statuss = $_POST['status'];
 
-                $sql = pg_query(
+                $sql = mysqli_query(
                     $conn,
                     "UPDATE litmas SET id_status='$statuss' WHERE id_litmas = '$id_litmas'"
                 );
@@ -288,7 +288,7 @@ $row = pg_fetch_array($sql);
                 if ($sql) {
                     echo "<script>alert('Data berhasil diedit');window.location='../pegawai/bkd-cuti bersyarat.php';</script>";
                 } else {
-                    echo pg_last_error($conn);
+                    echo mysqli_error($conn);
                 }
             } ?>
 
