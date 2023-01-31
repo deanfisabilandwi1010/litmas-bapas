@@ -168,66 +168,66 @@
   <main id="main" class="main">
 
   <?php
-  $resultbka_diversi = pg_query(
+  $resultbka_diversi = mysqli_query(
       $conn,
       'SELECT count(*) as diversi FROM litmas  WHERE id_jenis_litmas = 5 AND id_jenis_klien= 1'
   );
 
-  $resultbka_sidang = pg_query(
+  $resultbka_sidang = mysqli_query(
       $conn,
       'SELECT count(*) as sidang FROM litmas  WHERE id_jenis_litmas = 6 AND id_jenis_klien= 1'
   );
 
-  $resultbka_asirum = pg_query(
+  $resultbka_asirum = mysqli_query(
       $conn,
       'SELECT count(*) as asirum FROM litmas  WHERE id_jenis_litmas = 4 AND id_jenis_klien= 1'
   );
 
-  $resultbka_cb = pg_query(
+  $resultbka_cb = mysqli_query(
       $conn,
       'SELECT count(*) as cb FROM litmas  WHERE id_jenis_litmas = 1 AND id_jenis_klien= 1'
   );
 
-  $resultbka_cmb = pg_query(
+  $resultbka_cmb = mysqli_query(
       $conn,
       'SELECT count(*) as cmb FROM litmas  WHERE id_jenis_litmas = 2 AND id_jenis_klien= 1'
   );
 
-  $resultbka_pb = pg_query(
+  $resultbka_pb = mysqli_query(
       $conn,
       'SELECT count(*) as pb FROM litmas  WHERE id_jenis_litmas = 3 AND id_jenis_klien= 1'
   );
 
-  $resultbkd_asirum = pg_query(
+  $resultbkd_asirum = mysqli_query(
       $conn,
       'SELECT count(*) as asirum FROM litmas  WHERE id_jenis_litmas = 4 AND id_jenis_klien= 2'
   );
 
-  $resultbkd_cb = pg_query(
+  $resultbkd_cb = mysqli_query(
       $conn,
       'SELECT count(*) as cb FROM litmas  WHERE id_jenis_litmas = 1 AND id_jenis_klien= 2'
   );
 
-  $resultbkd_cmb = pg_query(
+  $resultbkd_cmb = mysqli_query(
       $conn,
       'SELECT count(*) as cmb FROM litmas  WHERE id_jenis_litmas = 3 AND id_jenis_klien= 2'
   );
 
-  $resultbkd_pb = pg_query(
+  $resultbkd_pb = mysqli_query(
       $conn,
       'SELECT count(*) as pb FROM litmas  WHERE id_jenis_litmas = 2 AND id_jenis_klien= 2'
   );
 
-  $jumlahbka_diversi = pg_fetch_array($resultbka_diversi);
-  $jumlahbka_sidang = pg_fetch_array($resultbka_sidang);
-  $jumlahbka_asirum = pg_fetch_array($resultbka_asirum);
-  $jumlahbka_cb = pg_fetch_array($resultbka_cb);
-  $jumlahbka_cmb = pg_fetch_array($resultbka_cmb);
-  $jumlahbka_pb = pg_fetch_array($resultbka_pb);
-  $jumlahbkd_asirum = pg_fetch_array($resultbkd_asirum);
-  $jumlahbkd_cb = pg_fetch_array($resultbkd_cb);
-  $jumlahbkd_cmb = pg_fetch_array($resultbkd_cmb);
-  $jumlahbkd_pb = pg_fetch_array($resultbkd_pb);
+  $jumlahbka_diversi = mysqli_fetch_array($resultbka_diversi);
+  $jumlahbka_sidang = mysqli_fetch_array($resultbka_sidang);
+  $jumlahbka_asirum = mysqli_fetch_array($resultbka_asirum);
+  $jumlahbka_cb = mysqli_fetch_array($resultbka_cb);
+  $jumlahbka_cmb = mysqli_fetch_array($resultbka_cmb);
+  $jumlahbka_pb = mysqli_fetch_array($resultbka_pb);
+  $jumlahbkd_asirum = mysqli_fetch_array($resultbkd_asirum);
+  $jumlahbkd_cb = mysqli_fetch_array($resultbkd_cb);
+  $jumlahbkd_cmb = mysqli_fetch_array($resultbkd_cmb);
+  $jumlahbkd_pb = mysqli_fetch_array($resultbkd_pb);
   ?>
 
     <div class="pagetitle">

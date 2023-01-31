@@ -188,33 +188,33 @@ include '../search.php';
         <tbody>
 
           <?php
-          $result = pg_query(
+          $result = mysqli_query(
               $conn,
               'SELECT * FROM litmas  WHERE id_jenis_litmas = 3 AND id_jenis_klien= 1 ORDER BY id_litmas ASC'
           );
-          $result2 = pg_query(
+          $result2 = mysqli_query(
               $conn,
               'SELECT nama_pegawai FROM pegawai INNER JOIN litmas ON pegawai.nip = litmas.nip WHERE id_jenis_litmas = 3 AND id_jenis_klien= 1 ORDER BY id_litmas ASC'
           );
-          $result3 = pg_query(
+          $result3 = mysqli_query(
               $conn,
               'SELECT nama_lapas FROM lapas INNER JOIN litmas ON lapas.id_lapas = litmas.id_lapas WHERE id_jenis_litmas = 3 AND id_jenis_klien= 1 ORDER BY id_litmas ASC'
           );
-          $result4 = pg_query(
+          $result4 = mysqli_query(
               $conn,
               'SELECT jenis_kasus FROM kasus INNER JOIN litmas ON kasus.id_kasus = litmas.id_kasus WHERE id_jenis_litmas = 3 AND id_jenis_klien= 1 ORDER BY id_litmas ASC'
           );
-          $result5 = pg_query(
+          $result5 = mysqli_query(
               $conn,
               'SELECT nama_status_litmas FROM status_litmas INNER JOIN litmas ON status_litmas.id_status = litmas.id_status WHERE id_jenis_litmas = 3 AND id_jenis_klien= 1 ORDER BY id_litmas ASC'
           );
 
-          while ($row = pg_fetch_array($result)) {
+          while ($row = mysqli_fetch_array($result)) {
 
-              $row2 = pg_fetch_array($result2);
-              $row3 = pg_fetch_array($result3);
-              $row4 = pg_fetch_array($result4);
-              $row5 = pg_fetch_array($result5);
+              $row2 = mysqli_fetch_array($result2);
+              $row3 = mysqli_fetch_array($result3);
+              $row4 = mysqli_fetch_array($result4);
+              $row5 = mysqli_fetch_array($result5);
               ?>
 
             <tr align="center">

@@ -195,21 +195,21 @@
                   <div class="row mb-6">
                     <label for="inputText" class="col-sm-2 col-form-label" required>Id Pegawai</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="nip_pg">
+                      <input type="text" class="form-control" name="nip_mysqli">
                     </div>
                   </div>
                   <br>
                   <div class="row mb-6">
                     <label for="inputText" class="col-sm-2 col-form-label" required>Nama Pegawai</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="nama_pg">
+                      <input type="text" class="form-control" name="nama_mysqli">
                     </div>
                   </div>
                   <br>
                   <div class="row mb-6">
                     <label for="inputText" class="col-sm-2 col-form-label" required>Jabatan Pegawai</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="jabatan_pg">
+                      <input type="text" class="form-control" name="jabatan_mysqli">
                     </div>
                   </div>
                   <div class="container-fluid py-5">
@@ -256,11 +256,11 @@
             </div>
       </section>
       <?php if (isset($_POST['simpan'])) {
-        $nip = $_POST['nip_pg'];
-        $nama_peg = $_POST['nama_pg'];
-        $jabatan = $_POST['jabatan_pg'];
+        $nip = $_POST['nip_mysqli'];
+        $nama_peg = $_POST['nama_mysqli'];
+        $jabatan = $_POST['jabatan_mysqli'];
 
-        $sql = pg_query(
+        $sql = mysqli_query(
           $conn,
           "INSERT INTO pegawai (nip,nama_pegawai,jabatan) values ('$nip','$nama_peg', '$jabatan')"
         );
@@ -268,7 +268,7 @@
         if ($sql) {
           echo "<script>alert('Data berhasil ditambah');window.location='../adminbps/userbapas.php';</script>";
         } else {
-          echo pg_last_error($conn);
+          echo mysqli_error($conn);
         }
       } ?>
 

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <?php include '../config.php';
 $id_lapas = $_GET['id_lapas'];
-$sql = pg_query($conn, "SELECT * from lapas where id_lapas='$id_lapas'");
-$row = pg_fetch_array($sql); ?>
+$sql = mysqli_query($conn, "SELECT * from lapas where id_lapas='$id_lapas'");
+$row = mysqli_fetch_array($sql); ?>
 
 <html lang="en">
 
@@ -263,12 +263,12 @@ $row = pg_fetch_array($sql); ?>
                 $nama_lapas = $_POST['nama_lapas'];
                 $alamat = $_POST['alamat'];
 
-                $sql = pg_query($conn, "UPDATE lapas SET id_lapas='$id_lapas', nama_lapas='$nama_lapas', alamat='$alamat' WHERE id_lapas = '$id_lapas'");
+                $sql = mysqli_query($conn, "UPDATE lapas SET id_lapas='$id_lapas', nama_lapas='$nama_lapas', alamat='$alamat' WHERE id_lapas = '$id_lapas'");
 
                 if ($sql) {
                     echo "<script>alert('Data berhasil diedit');window.location='../adminbps/lapas.php';</script>";
                 } else {
-                    echo pg_last_error($conn);
+                    echo mysqli_error($conn);
                 }
             } ?>
 

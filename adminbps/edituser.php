@@ -2,8 +2,8 @@
 <?php
 include '../config.php';
 $nip = $_GET['nip'];
-$sql = pg_query($conn, "SELECT * from pegawai where nip='$nip'");
-$row = pg_fetch_array($sql);
+$sql = mysqli_query($conn, "SELECT * from pegawai where nip='$nip'");
+$row = mysqli_fetch_array($sql);
 ?>
 
 <html lang="en">
@@ -209,7 +209,7 @@ $row = pg_fetch_array($sql);
                                     <div class="row mb-6">
                                         <label for="inputText" class="col-sm-2 col-form-label" required>Nama Pegawai</label>
                                         <div class="col-sm-10">
-                                            <input type="text" class="form-control" name="nama_pg" value="<?php echo $row[
+                                            <input type="text" class="form-control" name="nama_mysqli" value="<?php echo $row[
                                                 'nama_pegawai'
                                             ]; ?>">
                                         </div>
@@ -218,7 +218,7 @@ $row = pg_fetch_array($sql);
                                     <div class="row mb-6">
                                         <label for="inputText" class="col-sm-2 col-form-label" required>Jabatan Pegawai</label>
                                         <div class="col-sm-10">
-                                            <input type="text" class="form-control" name="jabatan_pg" value="<?php echo $row[
+                                            <input type="text" class="form-control" name="jabatan_mysqli" value="<?php echo $row[
                                                 'jabatan'
                                             ]; ?>">
                                         </div>
@@ -268,10 +268,10 @@ $row = pg_fetch_array($sql);
             </section>
             <?php if (isset($_POST['simpan'])) {
                 $nip = $_POST['nip'];
-                $nama_peg = $_POST['nama_pg'];
-                $jabatan = $_POST['jabatan_pg'];
+                $nama_peg = $_POST['nama_mysqli'];
+                $jabatan = $_POST['jabatan_mysqli'];
 
-                $sql = pg_query(
+                $sql = mysqli_query(
                     $conn,
                     "UPDATE pegawai SET nip='$nip', nama_pegawai='$nama_peg', jabatan='$jabatan' WHERE nip = '$nip'"
                 );
@@ -279,7 +279,7 @@ $row = pg_fetch_array($sql);
                 if ($sql) {
                     echo "<script>alert('Data berhasil diedit');window.location='../adminbps/userbapas.php';</script>";
                 } else {
-                    echo pg_last_error($conn);
+                    echo mysqli_error($conn);
                 }
             } ?>
 

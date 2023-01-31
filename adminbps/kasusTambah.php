@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <?php include '../config.php';
 
-$query = pg_query($conn, "SELECT max (id_kasus) as id_kasus FROM kasus");
-$row = pg_fetch_array($query);
-$kode = $row['id_kasus'];
-$id = $kode + 1;
+$query = mysqli_query($conn, "SELECT MAX(id_kasus) as max_kasus FROM kasus");
+$row = mysqli_fetch_array($query);
+$kode = $row['max_kasus'];
+
+$id = $kode;
+$id++;
 ?>
 
 <html lang="en">
@@ -258,12 +260,12 @@ $id = $kode + 1;
                 $id_kasus = $_POST['id_kasus'];
                 $jenis_kasus = $_POST['jenis_kasus'];
 
-                $sql = pg_query($conn, "INSERT INTO kasus (id_kasus,jenis_kasus) values ('$id_kasus','$jenis_kasus')");
+                $sql = mysqli_query($conn, "INSERT INTO kasus (id_kasus,jenis_kasus) values ('$id_kasus','$jenis_kasus')");
 
                 if ($sql) {
                     echo "<script>alert('Data berhasil ditambah');window.location='../adminbps/kasus.php';</script>";
                 } else {
-                    echo pg_last_error($conn);
+                    echo mysqli_error($conn);
                 }
             } ?>
 

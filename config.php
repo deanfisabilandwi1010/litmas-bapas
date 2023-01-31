@@ -7,7 +7,7 @@
 // $dbname = 'BapasSafe';
 
 $servername = "localhost";
-$database = "bapaspku";
+$database = "bapassukses";
 $username = "root";
 $password = "";
 // Create connection

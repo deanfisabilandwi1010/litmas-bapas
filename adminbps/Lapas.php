@@ -202,12 +202,12 @@
                 </thead>
                 <tbody>
                   <?php
-                  $result = pg_query(
+                  $result = mysqli_query(
                       $conn,
                       'SELECT * FROM lapas ORDER BY id_lapas ASC'
                   );
 
-                  while ($row = pg_fetch_array($result)) { ?>
+                  while ($row = mysqli_fetch_array($result)) { ?>
 
                     <tr align="center">
                       <td><?= $row['id_lapas'] ?></td>

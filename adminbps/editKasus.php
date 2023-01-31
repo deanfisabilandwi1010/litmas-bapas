@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <?php include '../config.php';
 $id_kasus = $_GET['id_kasus'];
-$sql = pg_query($conn, "SELECT * from kasus where id_kasus='$id_kasus'");
-$row = pg_fetch_array($sql); ?>
+$sql = mysqli_query($conn, "SELECT * from kasus where id_kasus='$id_kasus'");
+$row = mysqli_fetch_array($sql); ?>
 
 <html lang="en">
 
@@ -255,12 +255,12 @@ $row = pg_fetch_array($sql); ?>
                 $id_kasus = $_POST['id_kasus'];
                 $jenis_kasus = $_POST['jenis_kasus'];
 
-                $sql = pg_query($conn, "UPDATE kasus SET id_kasus='$id_kasus', jenis_kasus='$jenis_kasus' WHERE id_kasus = '$id_kasus'");
+                $sql = mysqli_query($conn, "UPDATE kasus SET id_kasus='$id_kasus', jenis_kasus='$jenis_kasus' WHERE id_kasus = '$id_kasus'");
 
                 if ($sql) {
                     echo "<script>alert('Data berhasil diedit');window.location='../adminbps/kasus.php';</script>";
                 } else {
-                    echo pg_last_error($conn);
+                    echo mysqli_error($conn);
                 }
             } ?>
 

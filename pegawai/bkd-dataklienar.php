@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <?php include '../config.php';
-$query = mysqli_query($conn, "SELECT max (id_litmas) as id_litmas FROM litmas");
+$query = mysqli_query($conn, "SELECT MAX(id_litmas) as max_litmas FROM litmas");
 $row = mysqli_fetch_array($query);
-$kode = $row['id_litmas'];
-$id = $kode + 1; ?>
+$kode = $row['max_litmas'];
+
+$id = $kode;
+$id++;?>
 
 <html lang="en">
 

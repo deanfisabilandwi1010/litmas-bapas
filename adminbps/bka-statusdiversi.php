@@ -3,8 +3,8 @@
 include '../config.php';
 
 $id_litmas = $_GET['id_litmas'];
-$sql = pg_query($conn, "SELECT * from litmas where id_litmas='$id_litmas'");
-$row = pg_fetch_array($sql);
+$sql = mysqli_query($conn, "SELECT * from litmas where id_litmas='$id_litmas'");
+$row = mysqli_fetch_array($sql);
 ?>
 
 <html lang="en">
@@ -234,11 +234,11 @@ $row = pg_fetch_array($sql);
                         <option>Pilih Lapas Asal</option>
                         <?php
                         include '../connect.php';
-                        $lapas = pg_query(
+                        $lapas = mysqli_query(
                           $conn,
                           'SELECT * FROM lapas ORDER BY nama_lapas ASC'
                         );
-                        while ($row2 = pg_fetch_assoc($lapas)) { ?>
+                        while ($row2 = mysqli_fetch_assoc($lapas)) { ?>
                           <option value="<?php echo $row2['id_lapas']; ?>" <?php if (
                                                                               $row['id_lapas'] == $row2['id_lapas']
                                                                             ) {
@@ -259,11 +259,11 @@ $row = pg_fetch_array($sql);
                         <option>Pilih PK</option>
                         <?php
                         include '../connect.php';
-                        $nip = pg_query(
+                        $nip = mysqli_query(
                           $conn,
                           'select * from pegawai order by nama_pegawai ASC'
                         );
-                        while ($row2 = pg_fetch_assoc($nip)) { ?>
+                        while ($row2 = mysqli_fetch_assoc($nip)) { ?>
                           <option value="<?php echo $row2['nip']; ?>" <?php if (
                                                                         $row['nip'] == $row2['nip']
                                                                       ) {
@@ -284,11 +284,11 @@ $row = pg_fetch_array($sql);
                         <option>Pilih Jenis Kasus</option>
                         <?php
                         include '../connect.php';
-                        $kasus = pg_query(
+                        $kasus = mysqli_query(
                           $conn,
                           'select * from kasus order by jenis_kasus ASC'
                         );
-                        while ($row2 = pg_fetch_assoc($kasus)) { ?>
+                        while ($row2 = mysqli_fetch_assoc($kasus)) { ?>
                           <option value="<?php echo $row2['id_kasus']; ?>" <?php if (
                                                                               $row['id_kasus'] == $row2['id_kasus']
                                                                             ) {
@@ -309,11 +309,11 @@ $row = pg_fetch_array($sql);
                         <option>Pilih Status Saat ini</option>
                         <?php
                         include '../connect.php';
-                        $status = pg_query(
+                        $status = mysqli_query(
                           $conn,
                           'select * from status_litmas order by id_status ASC'
                         );
-                        while ($row2 = pg_fetch_assoc($status)) { ?>
+                        while ($row2 = mysqli_fetch_assoc($status)) { ?>
                           <option value="<?php echo $row2['id_status']; ?>" <?php if (
                                                                               $row['id_status'] == $row2['id_status']
                                                                             ) {
@@ -374,7 +374,7 @@ $row = pg_fetch_array($sql);
         $kasuss = $_POST['kasus'];
         $statuss = $_POST['status'];
 
-        $sql = pg_query(
+        $sql = mysqli_query(
           $conn,
           "UPDATE litmas SET id_litmas = '$id_litmas', nama_klien = '$nama_klien', nip='$pkk', id_kasus='$kasuss', id_lapas='$lapass', id_status='$statuss' WHERE id_litmas = '$id_litmas'"
         );
@@ -382,7 +382,7 @@ $row = pg_fetch_array($sql);
         if ($sql) {
           echo "<script>alert('Data berhasil diedit');window.location='../adminbps/bka-diversi.php';</script>";
         } else {
-          echo pg_last_error($conn);
+          echo mysqli_error($conn);
         }
       } ?>
 
