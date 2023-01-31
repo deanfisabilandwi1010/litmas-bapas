@@ -17,11 +17,11 @@ include '../search.php';
   <!-- Favicons -->
   <link href="../assets/img/bapas.png" rel="icon">
   <link href="../assets/img/bapas.png" rel="Logoo">
-  
+
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-  
+
   <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
@@ -29,86 +29,87 @@ include '../search.php';
   <link href="../assets/vendor/quill/quill.bubble.css" rel="stylesheet">
   <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="../assets/vendor/simple-datatables/style.css" rel="stylesheet">
-  
+
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
-  
+
   <!-- =======================================================
   * Template Name: NiceAdmin - v2.2.2
   * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-  </head>
-  
-  <body>
-  
+</head>
+
+<body>
+
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
-  
+
     <div class="d-flex align-items-center justify-content-between">
-<a href="../public/Dashboard.php" class="logo d-flex align-items-center">
+      <a href="../index.php" class="logo d-flex align-items-center">
         <img src="../assets/img/bapas.png" alt="">
         <img src="../assets/img/pemasyarakatan.png" alt="">
         <span class="d-none d-lg-block">Bapas Pekanbaru</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
-  
+
+
     <nav class="header-nav ms-auto">
       <ul class="d-flex align-items-center">
-  
-             
-    <a class="btn btn-outline-light" style="margin-right: 10px" href="../loginbps.php">Login</a>
+
+
+        <a class="btn btn-outline-light" style="margin-right: 10px" href="../loginbps.php">Login</a>
   </header><!-- End Header -->
-  
-  
-    <!-- ======= Sidebar ======= -->
-    <aside id="sidebar" class="sidebar">
-  
-      <ul class="sidebar-nav" id="sidebar-nav">
-            <li class="nav-item">
-        <li class="nav-heading">Main Menu</li>
-        </li><!-- End Profile Page Nav -->
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="../public/Dashboard.php">
-            <i class="bi bi-grid"></i>
-            <span>Beranda</span>
-          </a>
-    </li><!-- End Dashboard Nav -->
-  
-        <li class="nav-item">
-          <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-            <i class="bi bi-menu-button-wide"></i><span>BKA</span><i class="bi bi-chevron-down ms-auto"></i>
-          </a>
-          <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+      <li class="nav-item">
+      <li class="nav-heading">Main Menu</li>
+      </li><!-- End Profile Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="../index.php">
+          <i class="bi bi-grid"></i>
+          <span>Beranda</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>BKA</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-              <a href="../public/bka-diversi.php">
+              <a href="../bka-diversi.php">
                 <i class="bi bi-circle"></i><span>Diversi</span>
               </a>
             </li>
             <li>
-              <a href="../public/bka-sidang.php">
+              <a href="../bka-sidang.php">
                 <i class="bi bi-circle"></i><span>Sidang</span>
               </a>
             </li>
             <li>
-              <a href="../public/bka-asimilasi rumah.php">
+              <a href="../bka-asimilasi rumah.php">
                 <i class="bi bi-circle"></i><span>Asimilasi Rumah</span>
               </a>
             </li>
             <li>
-              <a href="../public/bka-cuti bersyarat.php">
+              <a href="../bka-cuti bersyarat.php">
                 <i class="bi bi-circle"></i><span>Cuti Bersyarat</span>
               </a>
             </li>
             <li>
-              <a href="../public/bka-cuti menjelang bebas.php">
+              <a href="../bka-cuti menjelang bebas.php">
                 <i class="bi bi-circle"></i><span>Cuti Menjelang Bebas</span>
               </a>
             </li>
             <li>
-              <a href="../public/bka-pembebasan bersyarat.php">
+              <a href="../bka-pembebasan bersyarat.php">
                 <i class="bi bi-circle"></i><span>Pembebasan Bersyarat</span>
               </a>
             </li>
@@ -121,22 +122,22 @@ include '../search.php';
           </a>
           <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
             <li>
-              <a href="../public/bkd-asimilasi rumah.php">
+              <a href="../bkd-asimilasi rumah.php">
                 <i class="bi bi-circle"></i><span>Asimilasi Rumah</span>
               </a>
             </li>
             <li>
-              <a href="../public/bkd-cuti bersyarat.php">
+              <a href="../bkd-cuti bersyarat.php">
                 <i class="bi bi-circle"></i><span>Cuti Bersyarat</span>
               </a>
             </li>
             <li>
-              <a href="../public/bkd-cuti menjelang bebas.php">
+              <a href="../bkd-cuti menjelang bebas.php">
                 <i class="bi bi-circle"></i><span>Cuti Menjelang Bebas</span>
               </a>
             </li>
             <li>
-              <a href="../public/bkd-pembebasan bersyarat.php">
+              <a href="../bkd-pembebasan bersyarat.php">
                 <i class="bi bi-circle"></i><span>Pembebasan Bersyarat</span>
               </a>
             </li>
@@ -146,14 +147,14 @@ include '../search.php';
         <li class="nav-heading">Pages</li>
   
         <li class="nav-item">
-          <a class="nav-link collapsed" href="../public/layanan.php">
+          <a class="nav-link collapsed" href="../layanan.php">
             <i class="bi bi-person"></i>
             <span>Layanan</span>
           </a>
         </li><!-- End Profile Page Nav -->
   
         <li class="nav-item">
-          <a class="nav-link collapsed" href="../public/Tentang.php">
+          <a class="nav-link collapsed" href="../Tentang.php">
             <i class="bi bi-question-circle"></i>
             <span>Tentang</span>
           </a>
@@ -164,34 +165,35 @@ include '../search.php';
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Pembebasan Bersyarat</h1>
+      <h1>Cuti Menjelang Bebas </h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="../public/Dashboard.php">Home</a></li>
+          <li class="breadcrumb-item"><a href="../index.php">Home</a></li>
           <li class="breadcrumb-item">BKA</li>
-          <li class="breadcrumb-item"><a href="../public/bka-pembebasan bersyarat.php">Pembebasan Bersyarat</a></li>
+          <li class="breadcrumb-item"><a href="../bka-cuti menjelang bebas.php">Cuti Menjelang Bebas</a></li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
+
     <div class="mainpage">
       <div class="container">
-  
-          <div class="row height d-flex justify-content-center align-items-center">
-            <div class="col-md-6">
-              <div class="form">
-              <form class="search-form d-flex align-items-center" method="GET" action="">
+
+        <div class="row height d-flex justify-content-center align-items-center">
+          <div class="col-md-6">
+            <div class="form">
+            <form class="search-form d-flex align-items-center" method="GET" action="">
               <i class="fa fa-search"></i>
               <input type="search" id="search" value="" class="form-control" placeholder="Search anything...">
               <span class="left-pan"><i class="fa fa"></i></span>
             </form>
-              </div>
-            </div>        
+            </div>
+          </div>
         </div>
       </div>
       <br>
       <table class="table" id="table">
         <thead>
-          <tr align = "center">
+          <tr align="center"> 
             <th scope="col">Nama Klien</th>
             <th scope="col">Lapas Asal</th>
             <th scope="col">Kasus</th>
@@ -203,19 +205,19 @@ include '../search.php';
           <?php
           $result = pg_query(
               $conn,
-              'SELECT * FROM litmas  WHERE id_jenis_litmas = 2 AND id_jenis_klien= 1 ORDER BY id_litmas ASC'
+              'SELECT * FROM litmas  WHERE id_jenis_litmas = 3 AND id_jenis_klien= 1 ORDER BY id_litmas ASC'
           );
           $result2 = pg_query(
               $conn,
-              'SELECT nama_pegawai FROM pegawai INNER JOIN litmas ON pegawai.nip = litmas.nip WHERE id_jenis_litmas = 2 AND id_jenis_klien= 1 ORDER BY id_litmas ASC'
+              'SELECT nama_pegawai FROM pegawai INNER JOIN litmas ON pegawai.nip = litmas.nip WHERE id_jenis_litmas = 3 AND id_jenis_klien= 1 ORDER BY id_litmas ASC'
           );
           $result3 = pg_query(
               $conn,
-              'SELECT nama_lapas FROM lapas INNER JOIN litmas ON lapas.id_lapas = litmas.id_lapas WHERE id_jenis_litmas = 2 AND id_jenis_klien= 1 ORDER BY id_litmas ASC'
+              'SELECT nama_lapas FROM lapas INNER JOIN litmas ON lapas.id_lapas = litmas.id_lapas WHERE id_jenis_litmas = 3 AND id_jenis_klien= 1 ORDER BY id_litmas ASC'
           );
           $result4 = pg_query(
               $conn,
-              'SELECT jenis_kasus FROM kasus INNER JOIN litmas ON kasus.id_kasus = litmas.id_kasus WHERE id_jenis_litmas = 2 AND id_jenis_klien= 1 ORDER BY id_litmas ASC'
+              'SELECT jenis_kasus FROM kasus INNER JOIN litmas ON kasus.id_kasus = litmas.id_kasus WHERE id_jenis_litmas = 3 AND id_jenis_klien= 1 ORDER BY id_litmas ASC'
           );
 
           while ($row = pg_fetch_array($result)) {
@@ -224,7 +226,9 @@ include '../search.php';
               $row3 = pg_fetch_array($result3);
               $row4 = pg_fetch_array($result4);
               ?>
+
             <tr>
+              <td align="center"><?= $row['id_litmas'] ?></td>
               <td align="center"><?= $row['nama_klien'] ?></td>
               <td align="center"><?= $row3['nama_lapas'] ?></td>
               <td align="center"><?= $row4['jenis_kasus'] ?></td>
@@ -239,15 +243,13 @@ include '../search.php';
                 <?php } else { ?><span class="badge rounded-pill bg-danger">Ditolak</span>
                 <?php } ?>
               </td>
-
-              </td>
             </tr>
           <?php
           }
           ?>
       </table>
     </div>
-    </main> <!-- End #main -->
+  </main> <!-- End #main -->
 
   </main><!-- End #main -->
 

@@ -1,11 +1,15 @@
 <!DOCTYPE html>
+<?php
+include '../config.php';
+include '../search.php';
+?>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dashboard - Bapas Pekanbaru</title>
+  <title>BKD CB - Bapas Pekanbaru</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -34,7 +38,7 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
- </head>
+</head>
 
 <body>
 
@@ -42,7 +46,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="../public/Dashboard.php" class="logo d-flex align-items-center">
+      <a href="../index.php" class="logo d-flex align-items-center">
         <img src="../assets/img/bapas.png" alt="">
         <img src="../assets/img/pemasyarakatan.png" alt="">
         <span class="d-none d-lg-block">Bapas Pekanbaru</span>
@@ -67,11 +71,11 @@
       <li class="nav-heading">Main Menu</li>
       </li><!-- End Profile Page Nav -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="../public/Dashboard.php">
+        <a class="nav-link collapsed" href="../index.php">
           <i class="bi bi-grid"></i>
           <span>Beranda</span>
         </a>
-      </li>
+      </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
@@ -79,32 +83,32 @@
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="../public/bka-diversi.php">
+            <a href="../bka-diversi.php">
               <i class="bi bi-circle"></i><span>Diversi</span>
             </a>
           </li>
           <li>
-            <a href="../public/bka-sidang.php">
+            <a href="../bka-sidang.php">
               <i class="bi bi-circle"></i><span>Sidang</span>
             </a>
           </li>
           <li>
-            <a href="../public/bka-asimilasi rumah.php">
+            <a href="../bka-asimilasi rumah.php">
               <i class="bi bi-circle"></i><span>Asimilasi Rumah</span>
             </a>
           </li>
           <li>
-            <a href="../public/bka-cuti bersyarat.php">
+            <a href="../bka-cuti bersyarat.php">
               <i class="bi bi-circle"></i><span>Cuti Bersyarat</span>
             </a>
           </li>
           <li>
-            <a href="../public/bka-cuti menjelang bebas.php">
+            <a href="../bka-cuti menjelang bebas.php">
               <i class="bi bi-circle"></i><span>Cuti Menjelang Bebas</span>
             </a>
           </li>
           <li>
-            <a href="../public/bka-pembebasan bersyarat.php">
+            <a href="../bka-pembebasan bersyarat.php">
               <i class="bi bi-circle"></i><span>Pembebasan Bersyarat</span>
             </a>
           </li>
@@ -117,22 +121,22 @@
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="../public/bkd-asimilasi rumah.php">
+            <a href="../bkd-asimilasi rumah.php">
               <i class="bi bi-circle"></i><span>Asimilasi Rumah</span>
             </a>
           </li>
           <li>
-            <a href="../public/bkd-cuti bersyarat.php">
+            <a href="../bkd-cuti bersyarat.php">
               <i class="bi bi-circle"></i><span>Cuti Bersyarat</span>
             </a>
           </li>
           <li>
-            <a href="../public/bkd-cuti menjelang bebas.php">
+            <a href="../bkd-cuti menjelang bebas.php">
               <i class="bi bi-circle"></i><span>Cuti Menjelang Bebas</span>
             </a>
           </li>
           <li>
-            <a href="../public/bkd-pembebasan bersyarat.php">
+            <a href="../bkd-pembebasan bersyarat.php">
               <i class="bi bi-circle"></i><span>Pembebasan Bersyarat</span>
             </a>
           </li>
@@ -142,13 +146,14 @@
       <li class="nav-heading">Pages</li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="../public/layanan.php">
+        <a class="nav-link collapsed" href="../layanan.php">
           <i class="bi bi-person"></i>
           <span>Layanan</span>
         </a>
       </li><!-- End Profile Page Nav -->
+
       <li class="nav-item">
-        <a class="nav-link " href="../public/tentang.php">
+        <a class="nav-link collapsed" href="../Tentang.php">
           <i class="bi bi-question-circle"></i>
           <span>Tentang</span>
         </a>
@@ -158,72 +163,106 @@
 
   <main id="main" class="main">
 
-<div class="pagetitle">
-  <h1>Tentang</h1>
-  <nav>
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="../public/Dashboard.php">Beranda</a></li>
-      <li class="breadcrumb-item"><a href="../public/tentang.php">Tentang</a></li>
-    </ol>
-  </nav>
+    <div class="pagetitle">
+      <h1>Asimilasi Rumah</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="../index.php">Home</a></li>
+          <li class="breadcrumb-item">BKD</li>
+          <li class="breadcrumb-item"><a href="../bkd-cuti bersyarat.php">Cuti Bersyarat</a></li>
+        </ol>
+      </nav>
     </div><!-- End Page Title -->
-    <div class="accordion" id="accordionExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            <strong>Tentang Bapas</strong>
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            Bapas atau Balai Pemasyarakatan adalah tempat memberikan bimbingan kemasyarakatan dan pengentasan anak sesuai dengan peraturan perundang-undangan yang berlaku. Bapas melayani klien pemasyarakatan baik dewasa maupun anak yang berhadapan dengan hukum. <strong>Tugas Bapas Adalah</strong> Membantu memperlancar tugas Penyidik, Penuntut Umum, dan Hakim dalam Perkara Anak Nakal, baik di dalam maupun di luar sidang. Membantu melengkapi data Warga Binaan Pemasyarakatan dalam pembinaan, yang bersifat mencari pendekatan dan kontak antara Warga Binaan Pemasyarakatan yang bersangkutan dengan masyarakat.
+
+    <div class="mainpage">
+      <div class="container">
+
+        <div class="row height d-flex justify-content-center align-items-center">
+          <div class="col-md-6">
+            <div class="form">
+              <form class="search-form d-flex align-items-center" method="POST" action="#">
+                <i class="fa fa-search"></i>
+                <input type="search" id="search" value="" class="form-control" placeholder="Search anything...">
+                <span class="left-pan"><i class="fa fa"></i></span>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            <strong>Pengertian Bapas</strong>
-          </button>
-        </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            Bapas menurut Pasal satu angka 4 Undang-undang Nomor 12 Tahun 1995 Tentang Pemasyarakatan memberikan pengertian bahwa Balai Pemasyarakatan yang selanjutnya disebut BAPAS adalah pranata untuk melaksanakan bimbingan Klien Pemasyarakatan.
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingThree">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            <strong>Jam Kerja Bapas</strong>
-          </button>
-        </h2>
-        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            Senin - Kamis Jam 8.00 - 16.00.<strong>Jumat 8.00 - 16.30</strong>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingFour">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-            <strong>Alamat Bapas</strong>
-          </button>
-        </h2>
-        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <strong>Jalan Chandra Dimuka No. 01, Delima, Kec. Tampan, Kota Pekanbaru, Riau 28294</strong>
-            <br>
-            <br>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15958.747767466572!2d101.4013977!3d0.4649694!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2fa7f2e22ab24fa4!2sBAPAS%20(Balai%20Pemasyarakatan)%20Kelas%20II%20Pekanbaru!5e0!3m2!1sen!2sid!4v1674991377825!5m2!1sen!2sid" width="1120" height="450" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </div>
-      </div>
+      <br>
+      <table class="table" id="table">
+        <thead>
+          <tr align="center">
+            <th scope="col">Nama Klien</th>
+            <th scope="col">Lapas Asal</th>
+            <th scope="col">Kasus</th>
+            <th scope="col">PK</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
+          $result = pg_query(
+              $conn,
+              'SELECT * FROM litmas  WHERE id_jenis_litmas = 1 AND id_jenis_klien= 2 ORDER BY id_litmas ASC'
+          );
+          $result2 = pg_query(
+              $conn,
+              'SELECT nama_pegawai FROM pegawai INNER JOIN litmas ON pegawai.nip = litmas.nip WHERE id_jenis_litmas = 1 AND id_jenis_klien= 2 ORDER BY id_litmas ASC'
+          );
+          $result3 = pg_query(
+              $conn,
+              'SELECT nama_lapas FROM lapas INNER JOIN litmas ON lapas.id_lapas = litmas.id_lapas WHERE id_jenis_litmas = 1 AND id_jenis_klien= 2 ORDER BY id_litmas ASC'
+          );
+          $result4 = pg_query(
+              $conn,
+              'SELECT jenis_kasus FROM kasus INNER JOIN litmas ON kasus.id_kasus = litmas.id_kasus WHERE id_jenis_litmas = 1 AND id_jenis_klien= 2 ORDER BY id_litmas ASC'
+          );
+          $result5 = pg_query(
+              $conn,
+              'SELECT nama_status_litmas FROM status_litmas INNER JOIN litmas ON status_litmas.id_status = litmas.id_status WHERE id_jenis_litmas = 1 AND id_jenis_klien= 2 ORDER BY id_litmas ASC'
+          );
+
+          while ($row = pg_fetch_array($result)) {
+
+              $row2 = pg_fetch_array($result2);
+              $row3 = pg_fetch_array($result3);
+              $row4 = pg_fetch_array($result4);
+              $row5 = pg_fetch_array($result5);
+              ?>
+
+            <tr>
+              <td align="center"><?= $row['nama_klien'] ?></td>
+              <td align="center"><?= $row3['nama_lapas'] ?></td>
+              <td align="center"><?= $row4['jenis_kasus'] ?></td>
+              <td align="center"><?= $row2['nama_pegawai'] ?></td>
+              <td align="center">
+                <?php if (
+                    $row['id_status'] == 1
+                ) { ?><span class="badge rounded-pill bg-secondary">Sedang Diproses</span>
+                <?php } elseif (
+                    $row['id_status'] == 2
+                ) { ?><span class="badge rounded-pill bg-primary">Telah Dikirim</span>
+                <?php } else { ?><span class="badge rounded-pill bg-danger">Ditolak</span>
+                <?php } ?>
+              </td>
+              <td align="center">
+
+              </td>
+            </tr>
+          <?php
+          }
+          ?>
+
+        </tbody>
+      </table>
     </div>
+  </main> <!-- End #main -->
+
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id=" footer" class="footer">
+  <footer id="footer" class="footer">
     <div class="copyright">
       &copy; Copyright <strong><span>Bapas Pekanbaru</span></strong>. All Rights Reserved
     </div>
@@ -232,7 +271,7 @@
       <!-- You can delete the links only if you purchased the pro version. -->
       <!-- Licensing information: https://bootstrapmade.com/license/ -->
       <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-      Designed by <a href="https://bapaspekanbaru.kemenkumham.go.id/">Bapas Pekanbaru</a>
+      Designed by <a href="https://bootstrapmade.com/">Bapas Pekanbaru</a>
     </div>
   </footer><!-- End Footer -->
 

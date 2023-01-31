@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<?php include '../config.php'; ?>
-
+<?php include '../config.php';
+include '../search.php'; ?>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dashboard - Bapas Pekanbaru</title>
+  <title>BKD PB - Bapas Pekanbaru</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -26,8 +26,6 @@
   <link href="../assets/vendor/quill/quill.bubble.css" rel="stylesheet">
   <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="../assets/vendor/simple-datatables/style.css" rel="stylesheet">
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
@@ -46,7 +44,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="../public/Dashboard.php" class="logo d-flex align-items-center">
+      <a href="../index.php" class="logo d-flex align-items-center">
         <img src="../assets/img/bapas.png" alt="">
         <img src="../assets/img/pemasyarakatan.png" alt="">
         <span class="d-none d-lg-block">Bapas Pekanbaru</span>
@@ -70,7 +68,7 @@
       <li class="nav-heading">Main Menu</li>
       </li><!-- End Profile Page Nav -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="../public/Dashboard.php">
+        <a class="nav-link collapsed" href="../index.php">
           <i class="bi bi-grid"></i>
           <span>Beranda</span>
         </a>
@@ -82,97 +80,96 @@
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-              <a href="../public/bka-diversi.php">
-                <i class="bi bi-circle"></i><span>Diversi</span>
-              </a>
-            </li>
-            <li>
-              <a href="../public/bka-sidang.php">
-                <i class="bi bi-circle"></i><span>Sidang</span>
-              </a>
-            </li>
-            <li>
-              <a href="../public/bka-asimilasi rumah.php">
-                <i class="bi bi-circle"></i><span>Asimilasi Rumah</span>
-              </a>
-            </li>
-            <li>
-              <a href="../public/bka-cuti bersyarat.php">
-                <i class="bi bi-circle"></i><span>Cuti Bersyarat</span>
-              </a>
-            </li>
-            <li>
-              <a href="../public/bka-cuti menjelang bebas.php">
-                <i class="bi bi-circle"></i><span>Cuti Menjelang Bebas</span>
-              </a>
-            </li>
-            <li>
-              <a href="../public/bka-pembebasan bersyarat.php">
-                <i class="bi bi-circle"></i><span>Pembebasan Bersyarat</span>
-              </a>
-            </li>
-          </ul>
-        </li><!-- End Components Nav -->
-  
-        <li class="nav-item">
-          <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-            <i class="bi bi-journal-text"></i><span>BKD</span><i class="bi bi-chevron-down ms-auto"></i>
-          </a>
-          <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-            <li>
-              <a href="../public/bkd-asimilasi rumah.php">
-                <i class="bi bi-circle"></i><span>Asimilasi Rumah</span>
-              </a>
-            </li>
-            <li>
-              <a href="../public/bkd-cuti bersyarat.php">
-                <i class="bi bi-circle"></i><span>Cuti Bersyarat</span>
-              </a>
-            </li>
-            <li>
-              <a href="../public/bkd-cuti menjelang bebas.php">
-                <i class="bi bi-circle"></i><span>Cuti Menjelang Bebas</span>
-              </a>
-            </li>
-            <li>
-              <a href="../public/bkd-pembebasan bersyarat.php">
-                <i class="bi bi-circle"></i><span>Pembebasan Bersyarat</span>
-              </a>
-            </li>
-          </ul>
-        </li><!-- End Forms Nav -->
-    
-        <li class="nav-heading">Pages</li>
-  
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="../public/layanan.php">
-            <i class="bi bi-person"></i>
-            <span>Layanan</span>
-          </a>
-        </li><!-- End Profile Page Nav -->
-  
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="../public/Tentang.php">
-            <i class="bi bi-question-circle"></i>
-            <span>Tentang</span>
-          </a>
-        </li><!-- End F.A.Q Page Nav -->
-  
-    </aside><!-- End Sidebar-->
+            <a href="../bka-diversi.php">
+              <i class="bi bi-circle"></i><span>Diversi</span>
+            </a>
+          </li>
+          <li>
+            <a href="../bka-sidang.php">
+              <i class="bi bi-circle"></i><span>Sidang</span>
+            </a>
+          </li>
+          <li>
+            <a href="../bka-asimilasi rumah.php">
+              <i class="bi bi-circle"></i><span>Asimilasi Rumah</span>
+            </a>
+          </li>
+          <li>
+            <a href="../bka-cuti bersyarat.php">
+              <i class="bi bi-circle"></i><span>Cuti Bersyarat</span>
+            </a>
+          </li>
+          <li>
+            <a href="../bka-cuti menjelang bebas.php">
+              <i class="bi bi-circle"></i><span>Cuti Menjelang Bebas</span>
+            </a>
+          </li>
+          <li>
+            <a href="../bka-pembebasan bersyarat.php">
+              <i class="bi bi-circle"></i><span>Pembebasan Bersyarat</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Components Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>BKD</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../bkd-asimilasi rumah.php">
+              <i class="bi bi-circle"></i><span>Asimilasi Rumah</span>
+            </a>
+          </li>
+          <li>
+            <a href="../bkd-cuti bersyarat.php">
+              <i class="bi bi-circle"></i><span>Cuti Bersyarat</span>
+            </a>
+          </li>
+          <li>
+            <a href="../bkd-cuti menjelang bebas.php">
+              <i class="bi bi-circle"></i><span>Cuti Menjelang Bebas</span>
+            </a>
+          </li>
+          <li>
+            <a href="../bkd-pembebasan bersyarat.php">
+              <i class="bi bi-circle"></i><span>Pembebasan Bersyarat</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Forms Nav -->
+
+      <li class="nav-heading">Pages</li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="../layanan.php">
+          <i class="bi bi-person"></i>
+          <span>Layanan</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="../Tentang.php">
+          <i class="bi bi-question-circle"></i>
+          <span>Tentang</span>
+        </a>
+      </li><!-- End F.A.Q Page Nav -->
+
+  </aside><!-- End Sidebar-->
 
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Asimilasi Rumah</h1>
+      <h1>Pembebasan Bersyarat</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="../public/Dashboard.php">Home</a></li>
-          <li class="breadcrumb-item">BKA</li>
-          <li class="breadcrumb-item"><a href="../public/bka-asimilasi rumah.php">Asimilasi Rumah</a></li>
+          <li class="breadcrumb-item"><a href="../index.php">Home</a></li>
+          <li class="breadcrumb-item">BKD</li>
+          <li class="breadcrumb-item"><a href="../bkd-pembebasan bersyarat.php">Pembebasan Bersyarat</a></li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
-
 
     <div class="mainpage">
       <div class="container">
@@ -180,19 +177,18 @@
         <div class="row height d-flex justify-content-center align-items-center">
           <div class="col-md-6">
             <div class="form">
-            <form class="search-form d-flex align-items-center" method="GET" action="">
-              <i class="fa fa-search"></i>
-              <input type="search" id="search" value="" class="form-control" placeholder="Search anything...">
-              <span class="left-pan"><i class="fa fa"></i></span>
-            </form>
+              <form class="search-form d-flex align-items-center" method="POST" action="#">
+                <i class="fa fa-search"></i>
+                <input type="search" id="search" value="" class="form-control" placeholder="Search anything...">
+                <span class="left-pan"><i class="fa fa"></i></span>
+              </form>
             </div>
           </div>
         </div>
       </div>
-      <br>
-      <table class="table">
+      <table class="table" id="table">
         <thead>
-          <tr align="center"> 
+          <tr align="center">
             <th scope="col">Nama Klien</th>
             <th scope="col">Lapas Asal</th>
             <th scope="col">Kasus</th>
@@ -203,44 +199,51 @@
         <tbody>
           <?php
           $result = pg_query(
-              $conn,
-              'SELECT * FROM litmas  WHERE id_jenis_litmas = 4 AND id_jenis_klien= 1 ORDER BY id_litmas ASC'
+            $conn,
+            'SELECT * FROM litmas  WHERE id_jenis_litmas = 2 AND id_jenis_klien= 2 ORDER BY id_litmas ASC'
           );
           $result2 = pg_query(
-              $conn,
-              'SELECT nama_pegawai FROM pegawai INNER JOIN litmas ON pegawai.nip = litmas.nip WHERE id_jenis_litmas = 4 AND id_jenis_klien= 1 ORDER BY id_litmas ASC'
+            $conn,
+            'SELECT nama_pegawai FROM pegawai INNER JOIN litmas ON pegawai.nip = litmas.nip WHERE id_jenis_litmas = 2 AND id_jenis_klien= 2 ORDER BY id_litmas ASC'
           );
           $result3 = pg_query(
-              $conn,
-              'SELECT nama_lapas FROM lapas INNER JOIN litmas ON lapas.id_lapas = litmas.id_lapas WHERE id_jenis_litmas = 4 AND id_jenis_klien= 1 ORDER BY id_litmas ASC'
+            $conn,
+            'SELECT nama_lapas FROM lapas INNER JOIN litmas ON lapas.id_lapas = litmas.id_lapas WHERE id_jenis_litmas = 2 AND id_jenis_klien= 2 ORDER BY id_litmas ASC'
           );
           $result4 = pg_query(
-              $conn,
-              'SELECT jenis_kasus FROM kasus INNER JOIN litmas ON kasus.id_kasus = litmas.id_kasus WHERE id_jenis_litmas = 4 AND id_jenis_klien= 1 ORDER BY id_litmas ASC'
+            $conn,
+            'SELECT jenis_kasus FROM kasus INNER JOIN litmas ON kasus.id_kasus = litmas.id_kasus WHERE id_jenis_litmas = 2 AND id_jenis_klien= 2 ORDER BY id_litmas ASC'
+          );
+          $result5 = pg_query(
+            $conn,
+            'SELECT nama_status_litmas FROM status_litmas INNER JOIN litmas ON status_litmas.id_status = litmas.id_status WHERE id_jenis_litmas = 2 AND id_jenis_klien= 2 ORDER BY id_litmas ASC'
           );
 
           while ($row = pg_fetch_array($result)) {
 
-              $row2 = pg_fetch_array($result2);
-              $row3 = pg_fetch_array($result3);
-              $row4 = pg_fetch_array($result4);
-              ?>
+            $row2 = pg_fetch_array($result2);
+            $row3 = pg_fetch_array($result3);
+            $row4 = pg_fetch_array($result4);
+            $row5 = pg_fetch_array($result5);
+          ?>
 
             <tr>
               <td align="center"><?= $row['nama_klien'] ?></td>
               <td align="center"><?= $row3['nama_lapas'] ?></td>
               <td align="center"><?= $row4['jenis_kasus'] ?></td>
               <td align="center"><?= $row2['nama_pegawai'] ?></td>
-              <td  align="center">
+              <td align="center">
                 <?php if (
-                    $row['id_status'] == 1
+                  $row['id_status'] == 1
                 ) { ?><span class="badge rounded-pill bg-secondary">Sedang Diproses</span>
                 <?php } elseif (
-                    $row['id_status'] == 2
+                  $row['id_status'] == 2
                 ) { ?><span class="badge rounded-pill bg-primary">Telah Dikirim</span>
                 <?php } else { ?><span class="badge rounded-pill bg-danger">Ditolak</span>
                 <?php } ?>
               </td>
+
+              <td align="center">
 
               </td>
             </tr>
@@ -251,10 +254,7 @@
         </tbody>
       </table>
     </div>
-  </main> <!-- End #main -->
-
-  </main><!-- End #main -->
-
+  </main>
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">
@@ -283,35 +283,7 @@
 
   <!-- Template Main JS File -->
   <script src="../assets/js/main.js"></script>
-  <script src="//rawgithub.com/stidges/jquery-searchable/master/dist/jquery.searchable-1.0.0.min.js"></script>
-  <script>
-    $(function() {
-      $('#table').searchable({
-        striped: true,
-        oddRow: {
-          'background-color': '#f5f5f5'
-        },
-        evenRow: {
-          'background-color': '#fff'
-        },
-        searchType: 'fuzzy'
-      });
-
-      $('#searchable-container').searchable({
-        searchField: '#container-search',
-        selector: '.row',
-        childSelector: '.col-xs-4',
-        show: function(elem) {
-          elem.slideDown(100);
-        },
-        hide: function(elem) {
-          elem.slideUp(100);
-        }
-      })
-    });
-  </script>
 
 </body>
-
 
 </html>

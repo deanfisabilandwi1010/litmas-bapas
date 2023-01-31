@@ -132,7 +132,7 @@
                 ?>
               </div>
               <p class='mx-auto' style="color: aliceblue;">Tidak Punya Akun?
-                <a href="./public/Dashboard.php" style="color: cyan;">Keluar</a>
+                <a href="./index.php" style="color: cyan;">Keluar</a>
               </p>
             </div>
       
