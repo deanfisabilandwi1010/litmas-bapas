@@ -4,9 +4,6 @@ include '../config.php';
 include '../search.php';
 ?>
 <html lang="en">
-<?php
-session_start();
-if ($_SESSION['status'] == 'login') { ?>
 
   <head>
     <meta charset="utf-8">
@@ -180,7 +177,7 @@ if ($_SESSION['status'] == 'login') { ?>
           <thead>
             <tr align="center">
               <th scope="col">Nama Klien</th>
-              <th scope="col">Lapas Asal</th>
+              <th scope="col">UPT Asal</th>
               <th scope="col">Kasus</th>
               <th scope="col">PK</th>
               <th scope="col">Status</th>
@@ -288,7 +285,4 @@ if ($_SESSION['status'] == 'login') { ?>
     <script src="../assets/js/main.js"></script>
 
   </body>
-<?php } else {echo 'maaf Anda belum login.';}
-?>
-
 </html>

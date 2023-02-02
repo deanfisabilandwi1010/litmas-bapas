@@ -4,13 +4,10 @@
 <html lang="en">
 
 <head>
-  <?php
-  session_start();
-  if ($_SESSION['status'] == 'login') { ?>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Dashboard - Bapas Pekanbaru</title>
+    <title>UPT (admin) - Bapas Pekanbaru</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -148,7 +145,7 @@
       <li class="nav-item">
         <a class="nav-link " href="../adminbps/Lapas.php">
           <i class="bi bi-file-code-fill"></i>
-          <span>Lapas</span>
+          <span>UPT</span>
         </a>
       </li>
 
@@ -170,11 +167,11 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Lapas</h1>
+      <h1>UPT</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="../adminbps/dashboard.php">Beranda</a></li>
-          <li class="breadcrumb-item"><a href="../adminbps/Lapas.php">Lapas</a></li>
+          <li class="breadcrumb-item"><a href="../adminbps/Lapas.php">UPT</a></li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -184,7 +181,7 @@
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Lapas</h5>
+              <h5 class="card-title">UPT</h5>
               <div style="float: right; margin-bottom: 5px;">
                 <a class="btn btn-primary" href="../adminbps/lapasTambah.php" role="button">+</a>
               </div>
@@ -270,7 +267,6 @@
   <script src="../assets/js/main.js"></script>
 
 </body>
-<?php } else {echo 'maaf Anda belum login.';}
-  ?>
+
 
 </html>

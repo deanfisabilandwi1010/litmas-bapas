@@ -10,36 +10,33 @@ $row = mysqli_fetch_array($sql);
 <html lang="en">
 
 <head>
-  <?php
-  session_start();
-  if ($_SESSION['status'] == 'login') { ?>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Dashboard - Bapas Pekanbaru</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+  <title>BKA - Status AR (ADMIN) - Bapas Pekanbaru</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-    <!-- Favicons -->
-    <link href="../assets/img/bapas.png" rel="icon">
-    <link href="../assets/img/bapas.png" rel="Logoo">
+  <!-- Favicons -->
+  <link href="../assets/img/bapas.png" rel="icon">
+  <link href="../assets/img/bapas.png" rel="Logoo">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="../assets/vendor/quill/quill.snow.css" rel="stylesheet">
-    <link href="../assets/vendor/quill/quill.bubble.css" rel="stylesheet">
-    <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="../assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="../assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../assets/vendor/simple-datatables/style.css" rel="stylesheet">
 
-    <!-- Template Main CSS File -->
-    <link href="../assets/css/style.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
 
-    <!-- =======================================================
+  <!-- =======================================================
   * Template Name: NiceAdmin - v2.2.2
   * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
   * Author: BootstrapMade.com
@@ -153,7 +150,7 @@ $row = mysqli_fetch_array($sql);
       <li class="nav-item">
         <a class="nav-link collapsed" href="../adminbps/Lapas.php">
           <i class="bi bi-file-code-fill"></i>
-          <span>Lapas</span>
+          <span>UPT</span>
         </a>
 
       <li class="nav-item">
@@ -227,10 +224,10 @@ $row = mysqli_fetch_array($sql);
                   </div>
                   <br>
                   <div class="row mb-6">
-                    <label class="col-sm-2 col-form-label">Lapas Asal</label>
+                    <label class="col-sm-2 col-form-label">UPT Asal</label>
                     <div class="col-sm-10">
-                      <select style="padding:5px 10px; width:100%;" class="chosen-select" data-placeholder="Pilih Lapas Asal" name="lapas" required>
-                        <option>Pilih Lapas Asal</option>
+                      <select style="padding:5px 10px; width:100%;" class="chosen-select" data-placeholder="Pilih UPT Asal" name="lapas" required>
+                        <option>Pilih UPT Asal</option>
                         <?php
                         include '../connect.php';
                         $lapas = mysqli_query(
@@ -422,9 +419,5 @@ $row = mysqli_fetch_array($sql);
   <script src="../assets/js/main.js"></script>
 
 </body>
-<?php } else {
-    echo 'maaf Anda belum login.';
-  }
-?>
 
 </html>

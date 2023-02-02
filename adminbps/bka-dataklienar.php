@@ -10,13 +10,10 @@ $id++;?>
 <html lang="en">
 
 <head>
-  <?php
-  session_start();
-  if ($_SESSION['status'] == 'login') { ?>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>BKA DataklienCB (ADMIN)- Bapas Pekanbaru</title>
+    <title>BKA DataklienAR (ADMIN)- Bapas Pekanbaru</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -153,7 +150,7 @@ $id++;?>
       <li class="nav-item">
         <a class="nav-link collapsed" href="../adminbps/Lapas.php">
           <i class="bi bi-file-code-fill"></i>
-          <span>Lapas</span>
+          <span>UPT</span>
         </a>
 
       <li class="nav-item">
@@ -229,10 +226,10 @@ $id++;?>
                       </div>
                       <br>
                       <div class="row mb-6">
-                        <label class="col-sm-2 col-form-label">Lapas Asal</label>
+                        <label class="col-sm-2 col-form-label">UPT Asal</label>
                         <div class="col-sm-10">
-                          <select style="padding:5px 10px; width:100%;" class="chosen-select" data-placeholder="Pilih Lapas Asal" name="lapas" required>
-                            <option>Pilih Lapas Asal</option>
+                          <select style="padding:5px 10px; width:100%;" class="chosen-select" data-placeholder="Pilih UPT Asal" name="lapas" required>
+                            <option>Pilih UPT Asal</option>
                             <?php
                             $lapas = mysqli_query(
                               $conn,
@@ -391,9 +388,5 @@ $id++;?>
   <script src="../assets/js/main.js"></script>
 
 </body>
-<?php } else {
-    echo 'maaf Anda belum login.';
-  }
-?>
 
 </html>

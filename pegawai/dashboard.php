@@ -1,6 +1,3 @@
-<?php
-session_start();
-if ($_SESSION['status'] == 'login') { ?>
 
   <!DOCTYPE html>
   <?php include '../config.php'; ?>
@@ -10,7 +7,7 @@ if ($_SESSION['status'] == 'login') { ?>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Dashboard - Bapas Pekanbaru</title>
+    <title>Dashboard (PEGAWAI)- Bapas Pekanbaru</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -357,5 +354,4 @@ if ($_SESSION['status'] == 'login') { ?>
 
   </html>
 
-<?php } else {echo 'maaf Anda belum login.';}
-?>
+

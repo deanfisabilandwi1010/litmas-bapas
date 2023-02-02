@@ -12,13 +12,10 @@ $id++;
 <html lang="en">
 
 <head>
-    <?php
-    session_start();
-    if ($_SESSION['status'] == 'login') { ?>
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-        <title>BKD DataklienPB (ADMIN)- Bapas Pekanbaru</title>
+        <title>Tambah UPT (ADMIN)- Bapas Pekanbaru</title>
         <meta content="" name="description">
         <meta content="" name="keywords">
 
@@ -155,7 +152,7 @@ $id++;
             <li class="nav-item">
                 <a class="nav-link collapsed" href="../adminbps/Lapas.php">
                     <i class="bi bi-file-code-fill"></i>
-                    <span>Lapas</span>
+                    <span>UPT</span>
                 </a>
 
             <li class="nav-item">
@@ -180,7 +177,7 @@ $id++;
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="../adminbps/dashboard.php">Beranda</a></li>
-                    <li class="breadcrumb-item"><a href="../adminbps/lapas.php">Lapas</a></li>
+                    <li class="breadcrumb-item"><a href="../adminbps/lapas.php">UPT</a></li>
                     <li class="breadcrumb-item"><a href="../adminbps/lapasTambah.php">Tambah Tempat Asal</a></li>
                 </ol>
             </nav>
@@ -314,9 +311,5 @@ $id++;
     <script src="../assets/js/main.js"></script>
 
 </body>
-<?php } else {
-        echo 'maaf Anda belum login.';
-    }
-?>
 
 </html>

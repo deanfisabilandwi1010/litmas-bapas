@@ -7,13 +7,10 @@ $row = mysqli_fetch_array($sql); ?>
 <html lang="en">
 
 <head>
-    <?php
-    session_start();
-    if ($_SESSION['status'] == 'login') { ?>
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-        <title>Dashboard - Bapas Pekanbaru</title>
+        <title>edit UPT (ADMIN) - Bapas Pekanbaru</title>
         <meta content="" name="description">
         <meta content="" name="keywords">
 
@@ -150,7 +147,7 @@ $row = mysqli_fetch_array($sql); ?>
             <li class="nav-item">
                 <a class="nav-link collapsed" href="../adminbps/Lapas.php">
                     <i class="bi bi-file-code-fill"></i>
-                    <span>Lapas</span>
+                    <span>UPT</span>
                 </a>
 
             <li class="nav-item">
@@ -175,8 +172,8 @@ $row = mysqli_fetch_array($sql); ?>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="../adminbps/dashboard.php">Beranda</a></li>
-                    <li class="breadcrumb-item"><a href="../adminbps/lapas.php">Lapas</a></li>
-                    <li class="breadcrumb-item"><a href="../adminbps/editLapas.php">Edit Data Lapas</a></li>
+                    <li class="breadcrumb-item"><a href="../adminbps/lapas.php">UPT</a></li>
+                    <li class="breadcrumb-item"><a href="../adminbps/editLapas.php">Edit Data UPT</a></li>
                 </ol>
             </nav>
         </div><!-- End Page Title -->
@@ -233,7 +230,7 @@ $row = mysqli_fetch_array($sql); ?>
                                                                 </button>
                                                             </div>
                                                             <div class="modal-body">
-                                                                Apakah anda yakin ingin Mengedit data pegawai ini?
+                                                                Apakah anda yakin ingin Mengedit data Klien ini?
                                                             </div>
                                                             <div class="modal-footer ">
                                                                 <div>
@@ -307,9 +304,5 @@ $row = mysqli_fetch_array($sql); ?>
     <script src="../assets/js/main.js"></script>
 
 </body>
-<?php } else {
-        echo 'maaf Anda belum login.';
-    }
-?>
 
 </html>

@@ -7,13 +7,10 @@ include '../search.php';
 <html lang="en">
 
 <head>
-  <?php
-  session_start();
-  if ($_SESSION['status'] == 'login') { ?>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>BKA AR (ADMIN) - Bapas Pekanbaru</title>
+    <title>BKA Diversi (ADMIN) - Bapas Pekanbaru</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -149,7 +146,7 @@ include '../search.php';
       <li class="nav-item">
         <a class="nav-link collapsed" href="../adminbps/Lapas.php">
           <i class="bi bi-file-code-fill"></i>
-          <span>Lapas</span>
+          <span>UPT</span>
         </a>
 
       <li class="nav-item">
@@ -203,7 +200,7 @@ include '../search.php';
         <thead>
           <tr align="center">
             <th scope="col">Nama Klien</th>
-            <th scope="col">Lapas Asal</th>
+            <th scope="col">UPT Asal</th>
             <th scope="col">Kasus</th>
             <th scope="col">PK</th>
             <th scope="col">Status</th>
@@ -313,7 +310,5 @@ include '../search.php';
   <script src="../assets/js/main.js"></script>
 
 </body>
-<?php } else {echo 'maaf Anda belum login.';}
-  ?>
 
 </html>

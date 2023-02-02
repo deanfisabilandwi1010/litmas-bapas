@@ -10,7 +10,7 @@ include './search.php';
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dashboard - Bapas Pekanbaru</title>
+  <title>BKA CB (PUBLIC) - Bapas Pekanbaru</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -194,7 +194,7 @@ include './search.php';
         <thead>
           <tr align="center">
             <th scope="col">Nama Klien</th>
-            <th scope="col">Lapas Asal</th>
+            <th scope="col">UPT Asal</th>
             <th scope="col">Kasus</th>
             <th scope="col">PK</th>
             <th scope="col">Status</th>

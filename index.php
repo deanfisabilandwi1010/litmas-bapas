@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dashboard - Bapas Pekanbaru</title>
+  <title>Dashboard (PUBLIC)- Bapas Pekanbaru</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -228,8 +228,7 @@
       <h1>Dashboard</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="./index.php">Home</a></li>
-          <li class="breadcrumb-item">Dashboard</li>
+          <li class="breadcrumb-item"><a href="./index.php">Beranda</a></li>
         </ol>
       </nav>
     </div><!-- End Page Title -->

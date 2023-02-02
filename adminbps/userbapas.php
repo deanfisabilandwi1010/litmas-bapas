@@ -4,9 +4,6 @@
 <html lang="en">
 
 <head>
-  <?php
-  session_start();
-  if ($_SESSION['status'] == 'login') { ?>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -146,7 +143,7 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="../adminbps/Lapas.php">
           <i class="bi bi-file-code-fill"></i>
-          <span>Lapas</span>
+          <span>UPT</span>
         </a>
 
       <li class="nav-item">
@@ -271,7 +268,5 @@
   <script src="../assets/js/main.js"></script>
 
 </body>
-<?php } else {echo 'maaf Anda belum login.';}
-  ?>
 
 </html>

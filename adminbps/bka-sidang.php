@@ -7,36 +7,33 @@ include '../search.php';
 <html lang="en">
 
 <head>
-  <?php
-  session_start();
-  if ($_SESSION['status'] == 'login') { ?>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>BKA AR (ADMIN) - Bapas Pekanbaru</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+  <title>BKA Sidang (ADMIN) - Bapas Pekanbaru</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-    <!-- Favicons -->
-    <link href="../assets/img/bapas.png" rel="icon">
-    <link href="../assets/img/bapas.png" rel="Logoo">
+  <!-- Favicons -->
+  <link href="../assets/img/bapas.png" rel="icon">
+  <link href="../assets/img/bapas.png" rel="Logoo">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="../assets/vendor/quill/quill.snow.css" rel="stylesheet">
-    <link href="../assets/vendor/quill/quill.bubble.css" rel="stylesheet">
-    <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="../assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="../assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../assets/vendor/simple-datatables/style.css" rel="stylesheet">
 
-    <!-- Template Main CSS File -->
-    <link href="../assets/css/style.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
 
-    <!-- =======================================================
+  <!-- =======================================================
   * Template Name: NiceAdmin - v2.2.2
   * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
   * Author: BootstrapMade.com
@@ -149,7 +146,7 @@ include '../search.php';
       <li class="nav-item">
         <a class="nav-link collapsed" href="../adminbps/Lapas.php">
           <i class="bi bi-file-code-fill"></i>
-          <span>Lapas</span>
+          <span>UPT</span>
         </a>
 
       <li class="nav-item">
@@ -203,7 +200,7 @@ include '../search.php';
         <thead>
           <tr align="center">
             <th scope="col">Nama Klien</th>
-            <th scope="col">Lapas Asal</th>
+            <th scope="col">UPT Asal</th>
             <th scope="col">Kasus</th>
             <th scope="col">PK</th>
             <th scope="col">Status</th>
@@ -215,68 +212,62 @@ include '../search.php';
         <tbody>
           <?php
           $result = mysqli_query(
-              $conn,
-              'SELECT * FROM litmas  WHERE id_jenis_litmas = 6 AND id_jenis_klien= 1 ORDER BY id_litmas ASC'
+            $conn,
+            'SELECT * FROM litmas  WHERE id_jenis_litmas = 6 AND id_jenis_klien= 1 ORDER BY id_litmas ASC'
           );
           $result2 = mysqli_query(
-              $conn,
-              'SELECT nama_pegawai FROM pegawai INNER JOIN litmas ON pegawai.nip = litmas.nip WHERE id_jenis_litmas = 6 AND id_jenis_klien= 1 ORDER BY id_litmas ASC'
+            $conn,
+            'SELECT nama_pegawai FROM pegawai INNER JOIN litmas ON pegawai.nip = litmas.nip WHERE id_jenis_litmas = 6 AND id_jenis_klien= 1 ORDER BY id_litmas ASC'
           );
           $result3 = mysqli_query(
-              $conn,
-              'SELECT nama_lapas FROM lapas INNER JOIN litmas ON lapas.id_lapas = litmas.id_lapas WHERE id_jenis_litmas = 6 AND id_jenis_klien= 1 ORDER BY id_litmas ASC'
+            $conn,
+            'SELECT nama_lapas FROM lapas INNER JOIN litmas ON lapas.id_lapas = litmas.id_lapas WHERE id_jenis_litmas = 6 AND id_jenis_klien= 1 ORDER BY id_litmas ASC'
           );
           $result4 = mysqli_query(
-              $conn,
-              'SELECT jenis_kasus FROM kasus INNER JOIN litmas ON kasus.id_kasus = litmas.id_kasus WHERE id_jenis_litmas = 6 AND id_jenis_klien= 1 ORDER BY id_litmas ASC'
+            $conn,
+            'SELECT jenis_kasus FROM kasus INNER JOIN litmas ON kasus.id_kasus = litmas.id_kasus WHERE id_jenis_litmas = 6 AND id_jenis_klien= 1 ORDER BY id_litmas ASC'
           );
           $result5 = mysqli_query(
-              $conn,
-              'SELECT nama_status_litmas FROM status_litmas INNER JOIN litmas ON status_litmas.id_status = litmas.id_status WHERE id_jenis_litmas = 6 AND id_jenis_klien= 1 ORDER BY id_litmas ASC'
+            $conn,
+            'SELECT nama_status_litmas FROM status_litmas INNER JOIN litmas ON status_litmas.id_status = litmas.id_status WHERE id_jenis_litmas = 6 AND id_jenis_klien= 1 ORDER BY id_litmas ASC'
           );
 
           while ($row = mysqli_fetch_array($result)) {
 
-              $row2 = mysqli_fetch_array($result2);
-              $row3 = mysqli_fetch_array($result3);
-              $row4 = mysqli_fetch_array($result4);
-              $row5 = mysqli_fetch_array($result5);
-              ?>
+            $row2 = mysqli_fetch_array($result2);
+            $row3 = mysqli_fetch_array($result3);
+            $row4 = mysqli_fetch_array($result4);
+            $row5 = mysqli_fetch_array($result5);
+          ?>
 
             <tr align="center">
               <td><?= $row['nama_klien'] ?></td>
               <td><?= $row3['nama_lapas'] ?></td>
               <td><?= $row4['jenis_kasus'] ?></td>
               <td><?= $row2['nama_pegawai'] ?></td>
-              <!-- <td><span class="badge rounded-pill bg-secondary"><?= $row5[
-                  'nama_status_litmas'
-              ] ?></span></td> -->
+              <!-- <td><span class="badge rounded-pill bg-secondary"><?= $row5['nama_status_litmas'] ?></span></td> -->
               <td>
                 <?php if (
-                    $row['id_status'] == 1
+                  $row['id_status'] == 1
                 ) { ?><span class="badge rounded-pill bg-secondary">Sedang Diproses</span>
                 <?php } elseif (
-                    $row['id_status'] == 2
+                  $row['id_status'] == 2
                 ) { ?><span class="badge rounded-pill bg-primary">Telah Dikirim</span>
                 <?php } else { ?><span class="badge rounded-pill bg-danger">Ditolak</span>
                 <?php } ?>
               </td>
 
               <td>
-                <a class="bi bi-pencil-square bg-icon-primary" href="../adminbps/bka-statussidang.php?id_litmas=<?= $row[
-                    'id_litmas'
-                ] ?>"></a>
+                <a class="bi bi-pencil-square bg-icon-primary" href="../adminbps/bka-statussidang.php?id_litmas=<?= $row['id_litmas'] ?>"></a>
     </div>
     </td>
     <td>
-      <a onclick="return confirm('Yakin menghapus data ini ?')" class="bi bi-trash-fill bg-icon-danger" style="color: red;" href="../adminbps/bka-hapussidang.php?id_litmas=<?= $row[
-          'id_litmas'
-      ] ?>"></a>
+      <a onclick="return confirm('Yakin menghapus data ini ?')" class="bi bi-trash-fill bg-icon-danger" style="color: red;" href="../adminbps/bka-hapussidang.php?id_litmas=<?= $row['id_litmas'] ?>"></a>
     </td>
     </tr>
   <?php
           }
-          ?>
+  ?>
 
   </tbody>
   </table>
@@ -313,7 +304,5 @@ include '../search.php';
   <script src="../assets/js/main.js"></script>
 
 </body>
-<?php } else {echo 'maaf Anda belum login.';}
-  ?>
 
 </html>

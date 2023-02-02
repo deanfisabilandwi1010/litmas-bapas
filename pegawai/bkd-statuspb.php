@@ -10,36 +10,34 @@ $row = mysqli_fetch_array($sql);
 <html lang="en">
 
 <head>
-    <?php
-    session_start();
-    if ($_SESSION['status'] == 'login') { ?>
-        <meta charset="utf-8">
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-        <title>Dashboard - Bapas Pekanbaru</title>
-        <meta content="" name="description">
-        <meta content="" name="keywords">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-        <!-- Favicons -->
-        <link href="../assets/img/bapas.png" rel="icon">
-        <link href="../assets/img/bapas.png" rel="Logoo">
+    <title>BKD Status PB (PEGAWAI) - Bapas Pekanbaru</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
 
-        <!-- Google Fonts -->
-        <link href="https://fonts.gstatic.com" rel="preconnect">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Favicons -->
+    <link href="../assets/img/bapas.png" rel="icon">
+    <link href="../assets/img/bapas.png" rel="Logoo">
 
-        <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-        <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-        <link href="../assets/vendor/quill/quill.snow.css" rel="stylesheet">
-        <link href="../assets/vendor/quill/quill.bubble.css" rel="stylesheet">
-        <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-        <link href="../assets/vendor/simple-datatables/style.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-        <!-- Template Main CSS File -->
-        <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="../assets/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="../assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="../assets/vendor/simple-datatables/style.css" rel="stylesheet">
 
-        <!-- =======================================================
+    <!-- Template Main CSS File -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
   * Template Name: NiceAdmin - v2.2.2
   * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
   * Author: BootstrapMade.com
@@ -149,7 +147,7 @@ $row = mysqli_fetch_array($sql);
                     </li>
                 </ul>
             </li><!-- End Forms Nav -->
-            
+
     </aside><!-- End Sidebar-->
 
     <main id="main" class="main">
@@ -183,18 +181,14 @@ $row = mysqli_fetch_array($sql);
                                     <div class="row mb-6">
                                         <label for="inputText" class="col-sm-2 col-form-label" required>Nomor Litmas</label>
                                         <div class="col-sm-10">
-                                            <input type="text" class="form-control" readonly name="id_litmas" value="<?php echo $row[
-                                                'id_litmas'
-                                            ]; ?>" required>
+                                            <input type="text" class="form-control" readonly name="id_litmas" value="<?php echo $row['id_litmas']; ?>" required>
                                         </div>
                                     </div>
                                     <br>
                                     <div class="row mb-6">
                                         <label for="inputText" class="col-sm-2 col-form-label" required>Nama Klien</label>
                                         <div class="col-sm-10">
-                                            <input type="text" class="form-control" readonly name="nama_klien" value="<?php echo $row[
-                                                'nama_klien'
-                                            ]; ?>" required>
+                                            <input type="text" class="form-control" readonly name="nama_klien" value="<?php echo $row['nama_klien']; ?>" required>
                                         </div>
                                     </div>
                                     <br>
@@ -229,16 +223,12 @@ $row = mysqli_fetch_array($sql);
                                                         $status
                                                     )
                                                 ) { ?>
-                                                    <option value="<?php echo $row2[
-                                                        'id_status'
-                                                    ]; ?>" <?php if (
-    $row['id_status'] == $row2['id_status']
-) {
-    echo 'selected';
-} ?>>
-                                                        <?php echo $row2[
-                                                            'nama_status_litmas'
-                                                        ]; ?>
+                                                    <option value="<?php echo $row2['id_status']; ?>" <?php if (
+                                                                $row['id_status'] == $row2['id_status']
+                                                            ) {
+                                                                echo 'selected';
+                                                            } ?>>
+                                                        <?php echo $row2['nama_status_litmas']; ?>
                                                     </option>
                                                 <?php }
                                                 ?>
@@ -335,7 +325,5 @@ $row = mysqli_fetch_array($sql);
     <script src="../assets/js/main.js"></script>
 
 </body>
-<?php } else {echo 'maaf Anda belum login.';}
-    ?>
 
 </html>

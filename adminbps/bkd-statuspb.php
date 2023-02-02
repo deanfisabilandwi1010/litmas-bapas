@@ -8,13 +8,10 @@ $row = mysqli_fetch_array($sql); ?>
 <html lang="en">
 
 <head>
-  <?php
-  session_start();
-  if ($_SESSION['status'] == 'login') { ?>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Dashboard - Bapas Pekanbaru</title>
+    <title>BKD Status PB (ADMIN) - Bapas Pekanbaru</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -151,7 +148,7 @@ $row = mysqli_fetch_array($sql); ?>
       <li class="nav-item">
         <a class="nav-link collapsed" href="../adminbps/Lapas.php">
           <i class="bi bi-file-code-fill"></i>
-          <span>Lapas</span>
+          <span>UPT</span>
         </a>
 
       <li class="nav-item">
@@ -226,10 +223,10 @@ $row = mysqli_fetch_array($sql); ?>
                   </div>
                   <br>
                   <div class="row mb-6">
-                    <label class="col-sm-2 col-form-label">Lapas Asal</label>
+                    <label class="col-sm-2 col-form-label">UPT Asal</label>
                     <div class="col-sm-10">
-                      <select style="padding:5px 10px; width:100%;" class="chosen-select" data-placeholder="Pilih Lapas Asal" name="lapas" required>
-                        <option>Pilih Lapas Asal</option>
+                      <select style="padding:5px 10px; width:100%;" class="chosen-select" data-placeholder="Pilih UPT Asal" name="lapas" required>
+                        <option>Pilih UPT Asal</option>
                         <?php
                         include '../connect.php';
                         $lapas = mysqli_query($conn, "SELECT * FROM lapas ORDER BY nama_lapas ASC");
@@ -404,9 +401,5 @@ $row = mysqli_fetch_array($sql); ?>
   <script src="../assets/js/main.js"></script>
 
 </body>
-<?php } else {
-    echo 'maaf Anda belum login.';
-  }
-?>
 
 </html>
